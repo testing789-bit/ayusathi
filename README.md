@@ -1,11 +1,11 @@
-# 🏥 HealthCare Community Platform
+# 🏥 Ayu Sathi
 
-A comprehensive healthcare community platform built with React, designed to connect patients with medical professionals and provide a supportive health-focused social environment.
+Ayu Sathi is a comprehensive platform built with React, designed to connect patients with medical professionals and provide a supportive health-focused social environment.
 
 ## 🌟 Features
 
 ### 🏠 **Homepage**
-- Clean, professional design with white & blue healthcare theme
+- Clean, professional design with white & blue Ayu Sathi theme
 - Hero section with search functionality
 - Community statistics display
 - Health category navigation
@@ -23,7 +23,7 @@ A comprehensive healthcare community platform built with React, designed to conn
 - Comprehensive doctor profiles with ratings and reviews
 - Filter by specialty, location, and availability
 - Video consultation and in-person appointment booking
-- Verified healthcare professional badges
+- Verified Ayu Sathi professional badges
 - Emergency services access
 
 ### 📚 **Health Tips & Articles**
@@ -34,7 +34,7 @@ A comprehensive healthcare community platform built with React, designed to conn
 - Expert author verification
 
 ### 🔐 **Authentication System**
-- User registration for patients and healthcare professionals
+- User registration for patients and Ayu Sathi professionals
 - Social login integration (Google, Facebook)
 - Secure password management
 - User type differentiation
@@ -49,7 +49,7 @@ A comprehensive healthcare community platform built with React, designed to conn
 ## 🛠️ Technology Stack
 
 - **Frontend**: React 19, React Router DOM
-- **Styling**: Tailwind CSS with custom healthcare theme
+- **Styling**: Tailwind CSS with custom Ayu Sathi theme
 - **Icons**: Lucide React
 - **Build Tool**: Create React App
 - **Backend Ready**: Structured for Django REST Framework integration
@@ -96,7 +96,7 @@ A comprehensive healthcare community platform built with React, designed to conn
 - **Keyboard Navigation**: Full keyboard accessibility support
 - **Responsive Design**: Works seamlessly on all devices
 
-### Healthcare-Focused UX
+### Ayu Sathi-Focused UX
 - **Trust-Building Colors**: Professional blue and white theme
 - **Clear Information Hierarchy**: Easy-to-scan content layout
 - **Minimal Cognitive Load**: Simple, intuitive user flows
@@ -112,10 +112,10 @@ The platform is fully responsive and optimized for:
 ## 🔧 Configuration
 
 ### Tailwind CSS Theme
-The custom healthcare theme includes:
+The custom Ayu Sathi theme includes:
 - Primary colors: Blue shades for trust and professionalism
 - Typography: Inter font family with large base sizes
-- Components: Pre-built healthcare-specific UI components
+- Components: Pre-built Ayu Sathi-specific UI components
 
 ### Environment Setup
 Create a `.env` file in the root directory:
@@ -200,7 +200,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Development Team
 
-**SquadMinds** - Healthcare Technology Solutions
+**SquadMinds** - Ayu Sathi Technology Solutions
 
 ## 📞 Support
 
@@ -211,4 +211,4 @@ For support and questions:
 
 ---
 
-**Made with ❤️ for better healthcare accessibility**
+**Made with ❤️ for better Ayu Sathi accessibility**
