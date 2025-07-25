@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes dropFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px) scaleY(1.1) rotate(3deg);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(20px) scaleY(0.95) rotate(3deg);
+  }
+  85% {
+    transform: translateY(-10px) scaleY(1.02) rotate(3deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1) rotate(3deg);
+  }
+}
+
+.animate-drop {
+  animation: dropFromTop 1.2s cubic-bezier(0.23, 1.02, 0.32, 1) both;
+}

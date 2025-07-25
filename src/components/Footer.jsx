@@ -98,13 +98,13 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-primary-200" />
-                <span className="text-primary-100 text-lg">help@healthcarecommunity.com</span>
+                <span className="text-primary-100 text-lg">contact@ayusathi.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-primary-200 mt-1" />
                 <span className="text-primary-100 text-lg">
-                  New Delhi, India<br />
-                  PIN: 110001
+                  Mohali, Punjab, India.<br />
+                  PIN: 160055
                 </span>
               </div>
             </div>
@@ -115,7 +115,7 @@ const Footer = () => {
         <div className="border-t border-primary-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-primary-200 text-lg">
-              © 2024 HealthCare Community by SquadMinds. All rights reserved.
+              © {new Date().getFullYear()} HealthCare Community by SquadMinds. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link to="/privacy" className="text-primary-200 hover:text-white transition-colors text-lg">

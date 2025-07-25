@@ -9,6 +9,8 @@ import HealthTips from './pages/HealthTips';
 import Profile from './pages/Profile';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import AskQuestion from './pages/AskQuestion';
+import Settings from './pages/Settings';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/ask-question" element={<AskQuestion />} />
+            <Route path="/settings" element={<Settings />} />
           </Routes>
         </main>
         <Footer />

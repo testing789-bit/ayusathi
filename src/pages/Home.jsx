@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Heart, 
@@ -9,6 +9,106 @@ import {
   Search,
   BookOpen
 } from 'lucide-react';
+import { Typewriter } from 'react-simple-typewriter';
+
+// Counter component for animated numbers
+const Counter = ({ end, duration = 2000 }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  useEffect(() => {
+    let start = 0;
+    let final, formattedFinal, suffix = '';
+    if (end === '24/7') {
+      final = 24;
+      suffix = '/7';
+      formattedFinal = '24/7';
+    } else if (typeof end === 'string') {
+      final = parseInt(end.replace(/[^0-9]/g, ''));
+      if (end.includes('K')) suffix += 'K';
+      if (end.includes('+')) suffix += '+';
+      formattedFinal = final.toLocaleString() + suffix;
+    } else {
+      final = end;
+      formattedFinal = final.toLocaleString();
+    }
+    let increment = final / (duration / 16);
+    let frame;
+    function animate() {
+      start += increment;
+      if (start < final) {
+        setCount(Math.floor(start));
+        frame = requestAnimationFrame(animate);
+      } else {
+        setCount(final);
+      }
+    }
+    animate();
+    return () => cancelAnimationFrame(frame);
+  }, [end, duration]);
+  let display;
+  if (end === '24/7') {
+    display = `${count >= 24 ? '24/7' : Math.floor(count) + '/7'}`;
+  } else if (typeof end === 'string') {
+    let base = count.toLocaleString();
+    if (end.includes('K')) base += 'K';
+    if (end.includes('+')) base += '+';
+    display = base;
+  } else {
+    display = count.toLocaleString();
+  }
+  return <span ref={ref}>{display}</span>;
+};
+
+const TypingText = ({
+  texts = ["Your Health Companion", "Always With You", "Ask Experts, Get Answers!"],
+  speed = 60,
+  eraseSpeed = 30,
+  pause = 1200,
+  className = ""
+}) => {
+  const [displayed, setDisplayed] = useState("");
+  const [sentenceIdx, setSentenceIdx] = useState(0);
+  const [typing, setTyping] = useState(true);
+  const charIdx = useRef(0);
+
+  useEffect(() => {
+    let timeout;
+
+    const currentText = texts[sentenceIdx];
+
+    if (typing) {
+      if (charIdx.current < currentText.length) {
+        timeout = setTimeout(() => {
+          setDisplayed((prev) => prev + currentText[charIdx.current]);
+          charIdx.current += 1;
+        }, speed);
+      } else {
+        timeout = setTimeout(() => setTyping(false), pause);
+      }
+    } else {
+      if (charIdx.current > 0) {
+        timeout = setTimeout(() => {
+          setDisplayed((prev) => prev.slice(0, -1));
+          charIdx.current -= 1;
+        }, eraseSpeed);
+      } else {
+        timeout = setTimeout(() => {
+          setSentenceIdx((prev) => (prev + 1) % texts.length);
+          setTyping(true);
+        }, 400);
+      }
+    }
+    return () => clearTimeout(timeout);
+  }, [displayed, typing, texts, sentenceIdx, speed, eraseSpeed, pause]);
+
+  useEffect(() => {
+    setDisplayed("");
+    charIdx.current = 0;
+    setTyping(true);
+  }, [sentenceIdx, texts]);
+
+  return <span className={className}>{displayed}</span>;
+};
 
 const Home = () => {
   const features = [
@@ -64,10 +164,20 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                  Your <span className="text-primary-600">Health Companion</span>
-                  <br />
-                  Always With You
+                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight min-h-[3.5em]">
+                  <Typewriter
+                    words={[
+                      "Your Health Companion",
+                      "Always With You",
+                      "Ask Experts, Get Answers!"
+                    ]}
+                    loop={0} // 0 = infinite
+                    cursor
+                    cursorStyle="|"
+                    typeSpeed={60}
+                    deleteSpeed={30}
+                    delaySpeed={1200}
+                  />
                 </h1>
                 <p className="text-xl text-gray-700 leading-relaxed">
                   India's largest healthcare community. Get solutions to all your health-related problems here. 
@@ -140,7 +250,7 @@ const Home = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">
-                  {stat.number}
+                  <Counter end={stat.number} duration={1500 + index * 400} />
                 </div>
                 <div className="text-lg text-gray-600">
                   {stat.label}
