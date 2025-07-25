@@ -27,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "npm start",
+    "dev": "vite",
     "build:prod": "npm run build && echo 'Build completed successfully!'",
     "deploy": "npm run build && echo 'Ready for deployment!'",
     "lint": "eslint src/",
@@ -52,6 +52,7 @@
     ]
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.11"
+    "@tailwindcss/postcss": "^4.1.11",
+    "vite": "^7.0.6"
   }
 }
