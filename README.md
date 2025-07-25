@@ -1,6 +1,6 @@
-# 🏥 HealthCare Community Platform
+# 🏥 Ayu Sathi
 
-A comprehensive healthcare community platform built with React, designed to connect patients with medical professionals and provide a supportive health-focused social environment.
+Ayu Sathi is a comprehensive platform built with React, designed to connect patients with medical professionals and provide a supportive health-focused social environment.
 
 ## 🌟 Features
 
