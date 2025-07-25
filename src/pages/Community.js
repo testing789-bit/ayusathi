@@ -10,7 +10,7 @@ import {
   Award
 } from 'lucide-react';
 
-const Community = () => {
+const AyuSathi = () => {
   const [activeTab, setActiveTab] = useState('recent');
   
   const categories = [
@@ -93,7 +93,7 @@ const Community = () => {
         <div className="mb-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">Health Community</h1>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">Ayu Sathi</h1>
               <p className="text-lg text-gray-600">Ask questions, share knowledge, and help others on their health journey</p>
             </div>
             <Link
@@ -250,7 +250,7 @@ const Community = () => {
                 {categories.slice(1).map((category, index) => (
                   <Link
                     key={index}
-                    to={`/community?category=${category}`}
+                    to={`/ayusathi?category=${category}`}
                     className="block text-primary-600 hover:text-primary-800 hover:bg-primary-50 px-3 py-2 rounded transition-colors duration-200"
                   >
                     {category}
@@ -261,7 +261,7 @@ const Community = () => {
 
             {/* Community Guidelines */}
             <div className="card bg-blue-50 border-blue-200">
-              <h3 className="text-xl font-semibold text-blue-900 mb-4">Community Guidelines</h3>
+              <h3 className="text-xl font-semibold text-blue-900 mb-4">Ayu Sathi Guidelines</h3>
               <ul className="space-y-2 text-blue-800">
                 <li>• Be respectful and kind to all members</li>
                 <li>• Provide accurate health information</li>
@@ -277,4 +277,4 @@ const Community = () => {
   );
 };
 
-export default Community;
+export default AyuSathi;

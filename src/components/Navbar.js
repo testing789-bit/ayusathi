@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const navigation = [
     { name: 'Home', href: '/', icon: Heart },
-    { name: 'Community', href: '/community', icon: MessageCircle },
+    { name: 'Ayu Sathi', href: '/ayusathi', icon: MessageCircle },
     { name: 'Doctors', href: '/doctors', icon: Stethoscope },
     { name: 'Health Tips', href: '/health-tips', icon: BookOpen },
   ];
@@ -26,7 +26,7 @@ const Navbar = () => {
                 <Heart className="h-8 w-8 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-primary-600">HealthCare Community</h1>
+                <h1 className="text-2xl font-bold text-primary-600">Ayu Sathi</h1>
                 <p className="text-sm text-gray-600">Your Health Companion</p>
               </div>
             </Link>
