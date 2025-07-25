@@ -11,7 +11,6 @@ import {
   BookOpen,
   Award,
   Shield,
-  Bell,
   Camera,
   Save
 } from 'lucide-react';

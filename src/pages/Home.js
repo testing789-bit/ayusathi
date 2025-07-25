@@ -2,16 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Heart, 
-  Users, 
   Stethoscope, 
   MessageCircle, 
   Shield, 
-  Clock, 
-  Award, 
   ArrowRight,
   Search,
-  BookOpen,
-  Phone
+  BookOpen
 } from 'lucide-react';
 
 const Home = () => {

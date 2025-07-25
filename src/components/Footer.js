@@ -22,13 +22,13 @@ const Footer = () => {
               India's largest healthcare community. Find solutions to all your health-related problems and connect with medical experts.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-primary-200 hover:text-white transition-colors">
+              <a href="https://facebook.com/healthcarecommunity" className="text-primary-200 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 <Facebook className="h-6 w-6" />
               </a>
-              <a href="#" className="text-primary-200 hover:text-white transition-colors">
+              <a href="https://twitter.com/healthcarecommunity" className="text-primary-200 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 <Twitter className="h-6 w-6" />
               </a>
-              <a href="#" className="text-primary-200 hover:text-white transition-colors">
+              <a href="https://instagram.com/healthcarecommunity" className="text-primary-200 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 <Instagram className="h-6 w-6" />
               </a>
             </div>
@@ -54,9 +54,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-primary-100 hover:text-white transition-colors text-lg">
+                <Link to="/emergency" className="text-primary-100 hover:text-white transition-colors text-lg">
                   Emergency Services
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -66,24 +66,24 @@ const Footer = () => {
             <h4 className="text-lg font-semibold">Health Categories</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-primary-100 hover:text-white transition-colors text-lg">
+                <Link to="/category/general-medicine" className="text-primary-100 hover:text-white transition-colors text-lg">
                   General Medicine
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-primary-100 hover:text-white transition-colors text-lg">
+                <Link to="/category/cardiology" className="text-primary-100 hover:text-white transition-colors text-lg">
                   Cardiology
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-primary-100 hover:text-white transition-colors text-lg">
+                <Link to="/category/diabetes" className="text-primary-100 hover:text-white transition-colors text-lg">
                   Diabetes
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-primary-100 hover:text-white transition-colors text-lg">
+                <Link to="/category/mental-health" className="text-primary-100 hover:text-white transition-colors text-lg">
                   Mental Health
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -118,15 +118,15 @@ const Footer = () => {
               © 2024 HealthCare Community by SquadMinds. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-primary-200 hover:text-white transition-colors text-lg">
+              <Link to="/privacy" className="text-primary-200 hover:text-white transition-colors text-lg">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-primary-200 hover:text-white transition-colors text-lg">
+              </Link>
+              <Link to="/terms" className="text-primary-200 hover:text-white transition-colors text-lg">
                 Terms & Conditions
-              </a>
-              <a href="#" className="text-primary-200 hover:text-white transition-colors text-lg">
+              </Link>
+              <Link to="/help" className="text-primary-200 hover:text-white transition-colors text-lg">
                 Help
-              </a>
+              </Link>
             </div>
           </div>
         </div>

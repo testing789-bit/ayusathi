@@ -3,9 +3,6 @@ import { Link } from 'react-router-dom';
 import { 
   Search, 
   Plus, 
-  MessageCircle, 
-  ThumbsUp, 
-  ThumbsDown, 
   Eye, 
   Clock,
   Tag,
