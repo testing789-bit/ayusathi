@@ -18,46 +18,46 @@ const Home = () => {
   const features = [
     {
       icon: MessageCircle,
-      title: 'समुदायिक सहायता',
-      description: 'लाखों लोगों से जुड़कर अपनी स्वास्थ्य समस्याओं का समाधान पाएं।',
+      title: 'Community Support',
+      description: 'Connect with millions of people to find solutions to your health problems.',
       color: 'bg-blue-100 text-blue-600'
     },
     {
       icon: Stethoscope,
-      title: 'विशेषज्ञ डॉक्टर्स',
-      description: 'भारत के सर्वश्रेष्ठ डॉक्टर्स से मुफ्त में सलाह लें।',
+      title: 'Expert Doctors',
+      description: 'Get free advice from India\'s best doctors and medical professionals.',
       color: 'bg-green-100 text-green-600'
     },
     {
       icon: BookOpen,
-      title: 'स्वास्थ्य शिक्षा',
-      description: 'नवीनतम स्वास्थ्य जानकारी और टिप्स प्राप्त करें।',
+      title: 'Health Education',
+      description: 'Access the latest health information, tips, and educational content.',
       color: 'bg-purple-100 text-purple-600'
     },
     {
       icon: Shield,
-      title: 'सुरक्षित और निजी',
-      description: 'आपकी व्यक्तिगत जानकारी पूर्णतः सुरक्षित रहती है।',
+      title: 'Safe & Private',
+      description: 'Your personal information is completely secure and confidential.',
       color: 'bg-red-100 text-red-600'
     }
   ];
 
   const stats = [
-    { number: '50,000+', label: 'सक्रिय सदस्य' },
-    { number: '1,000+', label: 'विशेषज्ञ डॉक्टर्स' },
-    { number: '1 लाख+', label: 'समाधान किए गए प्रश्न' },
-    { number: '24/7', label: 'सहायता उपलब्ध' }
+    { number: '50,000+', label: 'Active Members' },
+    { number: '1,000+', label: 'Expert Doctors' },
+    { number: '100K+', label: 'Questions Answered' },
+    { number: '24/7', label: 'Support Available' }
   ];
 
   const healthCategories = [
-    'सामान्य चिकित्सा',
-    'हृदय रोग',
-    'मधुमेह',
-    'मानसिक स्वास्थ्य',
-    'महिला स्वास्थ्य',
-    'बाल चिकित्सा',
-    'त्वचा रोग',
-    'आंखों की देखभाल'
+    'General Medicine',
+    'Cardiology',
+    'Diabetes',
+    'Mental Health',
+    'Women\'s Health',
+    'Pediatrics',
+    'Dermatology',
+    'Eye Care'
   ];
 
   return (
@@ -69,13 +69,13 @@ const Home = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                  आपका <span className="text-primary-600">स्वास्थ्य साथी</span>
+                  Your <span className="text-primary-600">Health Companion</span>
                   <br />
-                  हमेशा आपके साथ
+                  Always With You
                 </h1>
                 <p className="text-xl text-gray-700 leading-relaxed">
-                  भारत का सबसे बड़ा स्वास्थ्य समुदाय। यहाँ मिलेगी आपकी सभी स्वास्थ्य संबंधी समस्याओं का समाधान। 
-                  विशेषज्ञ डॉक्टर्स से मुफ्त सलाह लें और स्वस्थ जीवन जिएं।
+                  India's largest healthcare community. Get solutions to all your health-related problems here. 
+                  Consult with expert doctors for free and live a healthy life.
                 </p>
               </div>
               
@@ -84,7 +84,7 @@ const Home = () => {
                   to="/register"
                   className="btn-primary flex items-center justify-center space-x-2 text-xl py-4 px-8"
                 >
-                  <span>अभी शुरू करें</span>
+                  <span>Get Started Now</span>
                   <ArrowRight className="h-6 w-6" />
                 </Link>
                 <Link
@@ -92,24 +92,24 @@ const Home = () => {
                   className="btn-secondary flex items-center justify-center space-x-2 text-xl py-4 px-8"
                 >
                   <MessageCircle className="h-6 w-6" />
-                  <span>समुदाय देखें</span>
+                  <span>View Community</span>
                 </Link>
               </div>
 
               {/* Quick Search */}
               <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">त्वरित खोज</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Quick Search</h3>
                 <div className="flex space-x-2">
                   <div className="flex-1 relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
                     <input
                       type="text"
-                      placeholder="अपनी स्वास्थ्य समस्या खोजें..."
+                      placeholder="Search for your health concerns..."
                       className="w-full pl-10 pr-4 py-3 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                     />
                   </div>
                   <button className="btn-primary px-6">
-                    खोजें
+                    Search
                   </button>
                 </div>
               </div>
@@ -121,14 +121,14 @@ const Home = () => {
                   <Heart className="h-12 w-12 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-center text-gray-900 mb-4">
-                  स्वास्थ्य सेवा 24/7
+                  Healthcare 24/7
                 </h3>
                 <p className="text-lg text-gray-600 text-center mb-6">
-                  किसी भी समय, कहीं भी अपनी स्वास्थ्य समस्याओं का समाधान पाएं।
+                  Get solutions to your health problems anytime, anywhere.
                 </p>
                 <div className="flex justify-center">
                   <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-lg font-semibold">
-                    ✓ उपलब्ध
+                    ✓ Available
                   </div>
                 </div>
               </div>
@@ -160,10 +160,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              क्यों चुनें <span className="text-primary-600">SehatSaathi</span>?
+              Why Choose <span className="text-primary-600">HealthCare Community</span>?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              हमारी सेवाएं आपको बेहतर स्वास्थ्य और खुशहाल जीवन प्रदान करने के लिए डिज़ाइन की गई हैं।
+              Our services are designed to provide you with better health and a happier life.
             </p>
           </div>
 
@@ -193,10 +193,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              स्वास्थ्य श्रेणियां
+              Health Categories
             </h2>
             <p className="text-xl text-gray-600">
-              विभिन्न स्वास्थ्य विषयों पर विशेषज्ञ सलाह प्राप्त करें
+              Get expert advice on various health topics
             </p>
           </div>
 
@@ -220,23 +220,23 @@ const Home = () => {
       <section className="py-20 bg-primary-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            आज ही शुरू करें अपना स्वास्थ्य सफर
+            Start Your Health Journey Today
           </h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            लाखों लोगों के साथ जुड़ें और बेहतर स्वास्थ्य की दिशा में पहला कदम उठाएं।
+            Join millions of people and take the first step towards better health.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/register"
               className="bg-white text-primary-600 hover:bg-gray-100 font-medium py-4 px-8 rounded-lg transition-colors duration-200 text-xl"
             >
-              मुफ्त में जुड़ें
+              Join for Free
             </Link>
             <Link
               to="/doctors"
               className="bg-primary-700 hover:bg-primary-800 text-white font-medium py-4 px-8 rounded-lg transition-colors duration-200 text-xl"
             >
-              डॉक्टर्स से मिलें
+              Meet Doctors
             </Link>
           </div>
         </div>

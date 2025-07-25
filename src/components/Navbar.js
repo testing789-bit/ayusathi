@@ -7,10 +7,10 @@ const Navbar = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: 'होम', href: '/', icon: Heart },
-    { name: 'कम्युनिटी', href: '/community', icon: MessageCircle },
-    { name: 'डॉक्टर्स', href: '/doctors', icon: Stethoscope },
-    { name: 'स्वास्थ्य टिप्स', href: '/health-tips', icon: BookOpen },
+    { name: 'Home', href: '/', icon: Heart },
+    { name: 'Community', href: '/community', icon: MessageCircle },
+    { name: 'Doctors', href: '/doctors', icon: Stethoscope },
+    { name: 'Health Tips', href: '/health-tips', icon: BookOpen },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -26,8 +26,8 @@ const Navbar = () => {
                 <Heart className="h-8 w-8 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-primary-600">SehatSaathi</h1>
-                <p className="text-sm text-gray-600">आपका स्वास्थ्य साथी</p>
+                <h1 className="text-2xl font-bold text-primary-600">HealthCare Community</h1>
+                <p className="text-sm text-gray-600">Your Health Companion</p>
               </div>
             </Link>
           </div>
@@ -58,13 +58,13 @@ const Navbar = () => {
                 to="/login"
                 className="btn-secondary"
               >
-                लॉगिन
+                Login
               </Link>
               <Link
                 to="/register"
                 className="btn-primary"
               >
-                साइन अप
+                Sign Up
               </Link>
             </div>
           </div>
@@ -108,14 +108,14 @@ const Navbar = () => {
                   className="block w-full text-center btn-secondary"
                   onClick={() => setIsOpen(false)}
                 >
-                  लॉगिन
+                  Login
                 </Link>
                 <Link
                   to="/register"
                   className="block w-full text-center btn-primary"
                   onClick={() => setIsOpen(false)}
                 >
-                  साइन अप
+                  Sign Up
                 </Link>
               </div>
             </div>
